@@ -1,0 +1,59 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "amazon_echo1.arreferenceimage"
+    },
+    {
+      "filename" : "amazon_echo2.arreferenceimage"
+    },
+    {
+      "filename" : "ipad1.arreferenceimage"
+    },
+    {
+      "filename" : "ipad2.arreferenceimage"
+    },
+    {
+      "filename" : "iphone1.arreferenceimage"
+    },
+    {
+      "filename" : "iphonex1.arreferenceimage"
+    },
+    {
+      "filename" : "macbook_pro1.arreferenceimage"
+    },
+    {
+      "filename" : "macbook_pro2.arreferenceimage"
+    },
+    {
+      "filename" : "macbook_pro3.arreferenceimage"
+    },
+    {
+      "filename" : "pencil1.arreferenceimage"
+    },
+    {
+      "filename" : "ps41.arreferenceimage"
+    },
+    {
+      "filename" : "switch1.arreferenceimage"
+    },
+    {
+      "filename" : "switch2.arreferenceimage"
+    },
+    {
+      "filename" : "switch3.arreferenceimage"
+    },
+    {
+      "filename" : "switch4.arreferenceimage"
+    },
+    {
+      "filename" : "switch5.arreferenceimage"
+    },
+    {
+      "filename" : "switch6.arreferenceimage"
+    }
+  ]
+}

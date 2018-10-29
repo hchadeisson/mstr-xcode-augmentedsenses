@@ -63,8 +63,6 @@ class ViewController: UIViewController
 	{
 		super.viewDidLoad()
 		sceneView.delegate = self
-		self.RESTUser.setProjectId(projectId: "00DA0E434629817E141757A44F6FF5CE")
-		self.RESTUser.setDatasetId(datasetId: "FB085E9E11E8C65DAD000080EF057F6A")
 		self.simulator.initialize(creditDuration: 12,
 								  creditAnnualRate: 0.0,
 								  creditMonthlyPayment: 0.0,
@@ -159,7 +157,7 @@ class ViewController: UIViewController
 
 	@IBAction func openSmartBotDidTouch()
 	{
-		UIApplication.shared.open(URL(string: "https://webchat.innaas.com/MSTR_HCHADEISSON-AugmentedSenses/chat?username=\(self.RESTUser.userName)")!)
+		UIApplication.shared.open(URL(string: "https://webchat.innaas.com/MSTR_HCHADEISSON-AugmentedSenses/chat")!)
 	}
 	@IBAction func searchButtonDidTouch(_ sender: UIBarButtonItem)
 	{

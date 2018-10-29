@@ -13,6 +13,11 @@ class cartClass
 	var jsonCart = ""
 	var itemName = ""
 	var itemPrice = 0
+	var loanDurationAttr = ""
+	var itemAttr = ""
+	var userNameAttr = ""
+	var cartDossierUrl = ""
+	var smartBotUrl = ""
 	var currentBasket: [String: Any]!
 	
 	func setItemName (itemName: String)
@@ -20,9 +25,18 @@ class cartClass
 		self.itemName = itemName
 	}
 	
+	func setEnv(loanDurationAttr: String, itemAttr: String, userNameAttr: String, cartDossierUrl: String, smartBotUrl: String)
+	{
+		self.loanDurationAttr = loanDurationAttr
+		self.itemAttr = itemAttr
+		self.userNameAttr = userNameAttr
+		self.cartDossierUrl = cartDossierUrl
+		self.smartBotUrl = smartBotUrl
+	}
+	
 	func getCurrentBasket(RESTUser: inout mstrRestApiClass)
 	{
-		let payload = "{\"requestedObjects\":{\"attributes\":[{\"id\":\"FA432E4411E8C65DBCDC0080EFD59FAA\"},{\"id\":\"FA431A6C11E8C65D402D0080EFD59FAA\"}]},\"viewFilter\":{\"operator\":\"In\",\"operands\":[{\"type\":\"attribute\",\"id\":\"FA43131411E8C65D402D0080EFD59FAA\"},{\"type\":\"elements\",\"elements\":[{ \"id\":\"FA43131411E8C65D402D0080EFD59FAA:\(RESTUser.userName)\"}]}]}}"
+		let payload = "{\"requestedObjects\":{\"attributes\":[{\"id\":\"\(self.loanDurationAttr)\"},{\"id\":\"\(self.itemAttr)\"}]},\"viewFilter\":{\"operator\":\"In\",\"operands\":[{\"type\":\"attribute\",\"id\":\"\(self.userNameAttr)\"},{\"type\":\"elements\",\"elements\":[{ \"id\":\"\(self.userNameAttr):\(RESTUser.userName)\"}]}]}}"
 		
 		RESTUser.Cube_postCreateCubeInstance(payload: payload, projectId: RESTUser.projectId, datasetId: RESTUser.datasetId)
 		{

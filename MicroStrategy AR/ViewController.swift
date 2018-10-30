@@ -152,12 +152,12 @@ class ViewController: UIViewController
 	
 	@IBAction func openMyCartDidTouch()
 	{
-		UIApplication.shared.open(URL(string: "dossier://?url=https://tutorial.microstrategy.com/MicroStrategyLibrary/app/00DA0E434629817E141757A44F6FF5CE/3ABF647611E862B6D2F40080EF854718")!)
+		UIApplication.shared.open(URL(string: self.cart.cartDossierUrl)!)
 	}
 
 	@IBAction func openSmartBotDidTouch()
 	{
-		UIApplication.shared.open(URL(string: "https://webchat.innaas.com/MSTR_HCHADEISSON-AugmentedSenses/chat")!)
+		UIApplication.shared.open(URL(string: self.cart.smartBotUrl)!)
 	}
 	@IBAction func searchButtonDidTouch(_ sender: UIBarButtonItem)
 	{
